@@ -88,19 +88,63 @@ import pprint
 # pprint.pprint(dir(os))
 # pprint.pprint(os.environ["HOME"])
 
-from string import Template
-values = {'one': 'Привет', 'copter': 'Квадракоптер'}
+# from string import Template
+# values = {'one': 'Привет', 'copter': 'Квадракоптер'}
+#
+# t = Template("""
+# Ну что, мои хорошие, всем $one
+# Это шаблонная строка
+# В нее можно вставлять значения по ключам
+# Хочу сюда вставлю слово $copter, хочу сюда $copter
+# """)
+#
+# print(t.substitute(values))
+#
+# import sys
+# print(sys.getrecursionlimit())
+#
+# from string import ascii_lowercase, ascii_uppercase, punctuation
+#
+# print(punctuation)
+# print(ascii_lowercase)
+# print(ascii_uppercase)
+#
+#
+# def file_n_lines(file_name: str, n: int) -> None:
+#     my_file = open(file_name, encoding='utf-8')
+#     for i in range(n):
+#         text= my_file.readline()
+#         print(text.strip())
+#
+# file_n_lines('111.txt', 3)
 
-t = Template("""
-Ну что, мои хорошие, всем $one
-Это шаблонная строка
-В нее можно вставлять значения по ключам
-Хочу сюда вставлю слово $copter, хочу сюда $copter
-""")
+# def create_file_with_numbers(n):
+#     my_file = open(f'range_{n}.txt', 'a', encoding='utf-8')
+#     for i in range(1,n+1):
+#         my_file.write(str(i)+'\n')
+#
+# create_file_with_numbers(5)
 
-print(t.substitute(values))
+from string import punctuation
 
-import sys
+# def longest_word_in_file(file_name):
+#     max_word = []
+#     count = 0
+#     my_file = open(file_name, 'r', encoding='utf-8')
+#     text = my_file.read()
+#     for i in punctuation:
+#         text = text.replace(i, '')
+#
+#     text = text.split()
+#     for i in text:
+#         i = i.strip(punctuation)
+#         if len(i)>= count:
+#             count = len(i)
+#             max_word = i
+#     return max_word
+#
+# longest_word_in_file('range_5.txt')
+
 
 
 
