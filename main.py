@@ -145,7 +145,42 @@ from string import punctuation
 #
 # longest_word_in_file('range_5.txt')
 
+# def count_namber(file_name:str)->str:
+#     sum_nambers_two_digit = 0
+#     count_nambers_three_digit = 0
+#     my_file =open(file_name, 'r',encoding='utf-8')
+#     text = my_file.read().strip()
+#     text = text.split('\n')
+#     print(text)
+#     for i in text:
+#         if len(i) == 2:
+#             sum_nambers_two_digit +=int(i)
+#         elif len(i) ==3:
+#             count_nambers_three_digit +=1
+#     print(count_nambers_three_digit, sum_nambers_two_digit)
+#
+# count_namber('numbers.txt')
+
+#
+# def find_lines_len_more_6(file_name:str) -> int:
+#
+#     with open(file_name, 'r') as f:
+#         count = 0
+#         for line in f:
+#             if len(line) > 6:
+#                 count += 1
+#         return count
+
+#
+#
+# find_lines_len_more_6('numbers.txt')
+
+def count_words(file_name:str)->int:
+    '''Эта функция подсчитывает оригинальное
+    количество слов в файле не зависимо от регистра'''
+    with open(file_name, 'r', encoding='utf-8') as f:
+        text = set(f.read().strip().lower().split())
+        print(len(text))
 
 
-
-
+count_words('lorem.txt')
