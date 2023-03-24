@@ -2,10 +2,6 @@ import json
 from random import randint
 from datetime import datetime
 
-
-
-
-
 str_json = """
 {
     "response": {
@@ -68,3 +64,27 @@ for i in a:
     alphabet[i] = count
     count +=1
 print(alphabet)
+
+# with open('manager_sales.json', 'r') as file:
+#     data = file.read()
+#     data = json.loads(data)
+# print(type(data))
+
+with open('manager_sales.json', 'r') as f:
+    data = json.load(f)
+print(type(data))
+sum_price = 0
+new_dict = {}
+
+for i in data:
+    sum_price = 0
+    print(i['manager']['first_name'], i['manager']['last_name'])
+    for j in i['cars']:
+        sum_price += j['price']
+
+    new_dict[(i['manager']['first_name'] +' '+ i['manager']['last_name'])] = sum_price
+
+print(new_dict)
+for i in sorted(new_dict.items(), key=lambda para: para[1], reverse=True):
+    print(*i)
+    break
