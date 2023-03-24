@@ -1,0 +1,23 @@
+{
+   "response": {
+      "count": 32363,
+      "items": [
+         {
+            "first_name": "\u041c\u0430\u0448\u0430",
+            "last_name": "Kargina",
+            "photo_50": true,
+            "likes": 154,
+            "item": null,
+            "now": "24.03.23"
+         },
+         {
+            "first_name": "Slava",
+            "last_name": "Kholod",
+            "photo_50": "https://pp.vk.me/...321/eTxKNQSJMuk.jpg",
+            "likes": 187,
+            "item": null,
+            "now": "24.03.23"
+         }
+      ]
+   }
+}

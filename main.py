@@ -179,8 +179,14 @@ def count_words(file_name:str)->int:
     '''Эта функция подсчитывает оригинальное
     количество слов в файле не зависимо от регистра'''
     with open(file_name, 'r', encoding='utf-8') as f:
-        text = set(f.read().strip().lower().split())
-        print(len(text))
+        words = {}
+        text = f.read().strip().upper().split()
+        for i in text:
+            if i in words:
+                words[i] +=1
+            else:
+                words[i] = 1
+        print(words)
 
 
 count_words('lorem.txt')
